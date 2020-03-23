@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "git push heroku master",
+    "hub": "git push origin master",
+    "commit": "git commit -a"
   },
   "keywords": [],
   "author": "",
