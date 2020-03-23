@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="w3-container w3-center w3-padding-32">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif; text-align: center; text-justify: center; text-transform: lowercase; font-weight: bold; color: #F87777;}
+    div.cardy {background-color: #C0D2E9;}
+    button.del {background-color: #F87777; stroke: #F87777}
+    div.heady {background-image: url('/diary-final/Untitled-2-01.png'); background-color: #1A2E48;}
+    a.more {background-color: #186C86;}
+    a.new {background-color: #F87777; stroke: #F87777; color: white;}
+    h1{font-weight: bolder; font-size: 70px;}
+    h4{font-weight: medium; font-size: 40px;}
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diary</title>
+    
+</head>
+<body class="w3-light-grey w3-padding-60 w3-margin-30">
+    
+        <div class="pb-5 pt-5 heady">
+        <h1 class="mb-5 mt-5">My Diary Entries</h1>
+        <a href="/articles/new" class="btn new">new entry</a>
+        </div>
+        <div class="container">
+        <% articles.forEach(article => { %>
+            <div class="card mt-4">
+                <div class="card-body cardy">
+                    <h4 class="card-title"><%= article.title %></h4>
+                    <div class="card-subtitle text-muted mb-2">
+                        <%= article.createdAt.toLocaleDateString() %>
+                    </div>
+                    <div class="card-text mb-4">
+                        <%= article.description %>
+                    </div>
+                    <a href="articles/<%= article.slug %>" class="btn btn-primary more">read more</a>
+                    <!-- <a href="articles/edit/<%= article.slug %>" class="btn btn-info">Edit</a> -->
+                    <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+                         <button type="submit" class="btn btn-danger del">delete</button>
+                    </form>
+                </div>
+            </div>
+        <%}) %>
+    </div>
+</body>
+
+</html>

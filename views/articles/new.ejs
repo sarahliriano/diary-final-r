@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif; text-align: center; text-justify: center; text-transform: lowercase; font-weight: bold; color: #F87777;}
+        h1 {background-color: #186C86;}
+        </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diary</title>
+</head>
+<body>
+    <h1 class="pb-5 pt-5 mb-5">New Entry</h1>
+    <div class="container">
+       
+       <form action="/articles" method="POST">
+        <%- include('_form_fields')%>
+       </form>
+    </div>
+</body>
+</html>
