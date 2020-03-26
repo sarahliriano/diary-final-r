@@ -5,9 +5,9 @@ I decided to make a diary app because I think it was a nice way of bringing toge
 The link to the deployed app on Heroku is this one: https://diary-final.herokuapp.com/
 
 This is what I started as my idea. Something simple but pleasant to look like so that it's not too distracting nor too "utilitarian".
-![img](files/Users/sarahlirianoalba/Documents/DWD/diary-final/.diary-final_design-01.jpg)
-![img](files/Users/sarahlirianoalba/Documents/DWD/diary-final/.diary-final_design-02.jpg)
-![img](files/Users/sarahlirianoalba/Documents/DWD/diary-final/.diary-final_design-03.jpg)
+<img src="images/.diary-final_design-01.jpg">
+<img src="images/.diary-final_design-02.jpg">
+<img src="images/.diary-final_design-03.jpg">
 
 
 
